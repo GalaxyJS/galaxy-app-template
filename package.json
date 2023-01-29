@@ -1,0 +1,25 @@
+{
+  "name": "galaxyjs-app-template",
+  "version": "1.0.0",
+  "description": "A template app build for developer to start developing with GalaxyJS",
+  "scripts": {
+    "development-server": "node development-server.mjs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GalaxyJS/galaxy-app-template.git"
+  },
+  "author": "Eeliya Rasta",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GalaxyJS/galaxy-app-template/issues"
+  },
+  "homepage": "https://github.com/GalaxyJS/galaxy-app-template#readme",
+  "developmentServer": {
+    "root": "src",
+    "port": 8888
+  },
+  "devDependencies": {
+    "@web/dev-server": "^0.1.35"
+  }
+}

@@ -1,0 +1,72 @@
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #eee;
+}
+
+.loader {
+  width: 100px;
+  height: 100px;
+  top: calc((100% - 50px) / 2);
+  left: calc((100% - 50px) / 2);
+  border-width: 4px;
+  border-style: solid;
+  border-color: #000 transparent;
+  border-radius: 50%;
+  display: block;
+  animation: spin 1s infinite linear;
+  position: absolute;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+a {
+  font-weight: bold;
+  color: #2eb8e6;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+p {
+  margin: 15px 0;
+}
+
+.main-title {
+  font-size: 5em;
+}
+
+.second-title {
+  font-size: 2em;
+  margin: 15px 0;
+}
+
+.message {
+  margin-top: 30px;
+}
+
+code {
+  background-color: #ccc;
+  border-radius: 6px;
+  padding: 5px 6px;
+  font-weight: 500;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2vh auto;
+}
+

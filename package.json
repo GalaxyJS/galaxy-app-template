@@ -1,7 +1,7 @@
 {
   "name": "galaxyjs-app-template",
   "version": "1.0.0",
-  "description": "A template app build for developer to start developing with GalaxyJS",
+  "description": "A prebuild GalaxyJS app template to get you up and running in a jiffy",
   "scripts": {
     "development-server": "node development-server.mjs"
   },

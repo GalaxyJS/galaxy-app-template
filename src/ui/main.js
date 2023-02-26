@@ -1,14 +1,15 @@
-/** @type Galaxy.View */
-const view = Scope.import('galaxy/view');
+export default (Scope) => {
+  const view = Scope.import('galaxy/view');
 
-view.container.node.innerHTML = '';
+  view.container.node.innerHTML = '';
 
-view.components({
-  'galaxy-welcome': Scope.import('ui/components/welcome.component.js')
-});
+  view.components({
+    'app-welcome': Scope.import('ui/components/app-welcome.component.js')
+  });
 
-view.blueprint([
-  {
-    tag: 'galaxy-welcome'
-  }
-]);
+  view.blueprint([
+    {
+      tag: 'app-welcome'
+    }
+  ]);
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>GalaxyJS App Template</title>
+  <!-- Browser icon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.ico">
+
+  <base href="/">
+  <meta name="description" content="GalaxyJS - The framework to build fancy web applications">
+  <meta name="keywords" content="galaxyjs, frontend, framework, frontend framework, javascript, fancy">
+  <meta name="author" content="Eeliya Rasta, eeliya.rasta@gmail.com">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="@assets/styles/main.css"/>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollToPlugin.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/EasePack.min.js" defer></script>
+
+
+  <!-- Boot GalaxyJS with a module -->
+  <script type="module">
+    import {boot} from '@assets/galaxyjs/galaxy.js';
+    // Single Page Apps for GitHub Pages
+    // MIT License
+    // https://github.com/rafgraph/spa-github-pages
+    // This script checks to see if a redirect is present in the query string,
+    // converts it back into the correct url and adds it to the
+    // browser's history using window.history.replaceState(...),
+    // which won't cause the browser to attempt to load the new url.
+    // When the single page app is loaded further down in this file,
+    // the correct url will be waiting in the browser's history for
+    // the single page app to route accordingly.
+    (function (l) {
+      if (l.search[1] === '/') {
+        var decoded = l.search.slice(1).split('&').map(function (s) {
+          return s.replace(/~and~/g, '&');
+        }).join('?');
+        window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location));
+
+
+    // Startup GalaxyJS application
+    (function () {
+      window.addEventListener('load', run);
+
+      function run() {
+        boot({
+          element: document.getElementById('body'),
+          path: 'src/ui/main.js',
+        }).then(function (module) {
+          module.start();
+        });
+      }
+    })();
+  </script>
+</head>
+
+<body id="body">
+<div class="loader"></div>
+<noscript>
+  <h2>Javascript is NOT enabled!</h2>
+  <p>
+    In order to see the content of this page you need to enable Javascript.
+  </p>
+  <p>
+    <a href="https://www.google.com/search?q=how+to+enable+javascript">How to enable Javascript.</a>
+  </p>
+</noscript>
+</body>
+</html>
+

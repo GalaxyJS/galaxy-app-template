@@ -1,10 +1,12 @@
+import AppWelcome from './components/app-welcome.component.js';
+
 export default (Scope) => {
-  const view = Scope.import('galaxy/view');
+  const view = Scope.useView();
 
   view.container.node.innerHTML = '';
 
   view.components({
-    'app-welcome': Scope.import('ui/components/app-welcome.component.js')
+    'app-welcome': AppWelcome
   });
 
   view.blueprint([

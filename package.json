@@ -2,16 +2,20 @@
   "name": "galaxyjs-app-template",
   "version": "1.0.0",
   "description": "A prebuild GalaxyJS app template to get you up and running in a jiffy",
+  "type": "module",
   "scripts": {
-    "development-server": "node development-server.mjs"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "engines": {
-    "node": "14.0.0"
+    "node": "20.0.0"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/GalaxyJS/galaxy-app-template.git"
   },
+
   "author": "Eeliya Rasta",
   "license": "MIT",
   "bugs": {
@@ -23,9 +27,6 @@
     "port": 8888
   },
   "devDependencies": {
-    "@web/dev-server": "^0.1.35",
-    "gulp": "^4.0.2",
-    "gulp-sass": "^5.1.0",
-    "sass": "^1.58.3"
+    "vite": "^6.0.3"
   }
 }

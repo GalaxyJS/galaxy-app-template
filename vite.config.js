@@ -5,9 +5,9 @@ import { defineConfig } from 'vite'
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('./', import.meta.url)),
-      // 'photo-motion-ui-toolkit': fileURLToPath(new URL('./photo-motion-ui-toolkit', import.meta.url))
-    }
+    alias: [
+      { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) },
+      { find: '@assets', replacement: fileURLToPath(new URL('./src/assets', import.meta.url)) },
+    ]
   }
 })
